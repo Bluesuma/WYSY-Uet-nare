@@ -1,0 +1,49 @@
+<!--
+Author: Arteom Arkhipoff (Bluesuma)
+		Aleksandr Plotnikov (007)
+Case: №3
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>WYSI Editor | Team: Uet`nare</title>
+</head>
+<body>
+	<div id="wysiwygEditor">
+		<div class="editor-toolbar">
+			<button type="button" class="formatButton fa fa-bold" onclick="changeText('bold');"></button>
+			<button type="button" class="formatButton fa fa-italic" onclick="changeText('italic');"></button>
+			<button type="button" class="formatButton fa fa-underline" onclick="changeText('underline');"></button>
+			<button type="button" class="formatButton fa fa-strikethrough" onclick="changeText('strikethrough');"></button>
+			<button type="button" class="formatButton fa fa-link" onclick="changeText('createlink');"></button>
+			<button type="button" class="formatButton fa fa-unlink" onclick="changeText('unlink');"></button>
+			<button type="button" class="formatButton fa fa-align-justify" onclick="changeText('justifyfull');"></button>
+			<button type="button" class="formatButton fa fa-align-left" onclick="changeText('justifyleft');"></button>
+			<button type="button" class="formatButton fa fa-align-center" onclick="changeText('justifycenter');"></button>
+			<button type="button" class="formatButton fa fa-align-right" onclick="changeText('justifyright');"></button>
+			<button type="button" class="formatButton fa fa-undo" onclick="changeText('undo');"></button>
+			<button type="button" class="formatButton fa fa-repeat" onclick="changeText('redo');"></button>
+			<select class="headings" onchange="changeText( 'formatblock', this.value );">
+				<option value="p">P</option>
+				<option value="h1">H1</option>
+				<option value="h2">H2</option>
+				<option value="h3">H3</option>
+				<option value="h4">H4</option>
+				<option value="h5">H5</option>
+				<option value="h6">H6</option>
+			</select>
+		</div>
+		<div id="editor-content" class="editor-content" contenteditable="true">
+			<p>Simple Text</p>
+		</div>
+	</div>
+	
+	<script src="wysiwyg.js"></script>
+</body>
+</html>
